@@ -195,8 +195,9 @@ class _DataPageState extends State<DataPage> {
         textStyle: const TextStyle(
           fontSize: 18, // Set the font size you like
           fontWeight: FontWeight.bold, // Set to bold
-          color: Colors.white, // White text color
+          color: Colors.blueAccent, // Blue text color
         ),
+        backgroundColor: Colors.white, // White background
       ),
     );
   }

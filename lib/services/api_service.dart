@@ -15,4 +15,17 @@ class ApiService {
       throw Exception('Failed to load comments');
     }
   }
+
+  Future<void> addComment(ReviewModel comment) async {
+    final response = await http.post(
+      Uri.parse(
+          'https://your-api-endpoint/comments'), // Replace with your API endpoint
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode(comment.toJson()),
+    );
+
+    if (response.statusCode != 201) {
+      throw Exception('Failed to add comment');
+    }
+  }
 }

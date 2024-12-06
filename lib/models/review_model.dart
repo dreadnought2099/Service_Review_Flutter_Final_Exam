@@ -22,4 +22,14 @@ class ReviewModel {
       body: json['body'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'postId': postId,
+      'id': id,
+      'name': name,
+      'email': email,
+      'body': body,
+    };
+  }
 }
